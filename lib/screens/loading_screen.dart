@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:preview_project/first_page.dart';
+import 'package:preview_project/screens/first_page.dart';
+import 'package:preview_project/widgets/bold_text.dart';
+import 'package:preview_project/widgets/center_image.dart';
 
 class LoadingScreen extends StatefulWidget {
   const LoadingScreen({Key? key}) : super(key: key);
@@ -35,27 +37,21 @@ class _LoadingScreenState extends State<LoadingScreen> {
                 Expanded(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Image.asset('asset/logo.png'),
-                      const SizedBox(
+                    children: const [
+                      CenterImage(image: 'asset/logo.png'),
+                       SizedBox(
                         height: 20,
                       ),
-                      const Text(
-                        'Property Sharing solutions',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            fontSize: 25.0),
-                      ),
-                      const SizedBox(
+                       BoldText(text: 'Property Sharing solutions'),
+                       SizedBox(
                         height: 75,
                       ),
                     ],
                   ),
                 ),
-                Align(
+                const Align(
                   alignment: Alignment.bottomCenter,
-                  child: Image.asset('asset/background.png'),
+                  child: CenterImage(image: 'asset/background.png'),
                 ),
               ],
             ),

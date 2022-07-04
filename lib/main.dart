@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:preview_project/loading_screen.dart';
+import 'package:preview_project/screens/loading_screen.dart';
+
 
 void main() {
   runApp(const MyApp());
