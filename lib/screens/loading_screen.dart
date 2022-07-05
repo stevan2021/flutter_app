@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:preview_project/screens/first_page.dart';
+import 'package:preview_project/screens/onboarding/first_page.dart';
 import 'package:preview_project/widgets/bold_text.dart';
 import 'package:preview_project/widgets/center_image.dart';
 
@@ -39,11 +39,11 @@ class _LoadingScreenState extends State<LoadingScreen> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: const [
                       CenterImage(image: 'asset/logo.png'),
-                       SizedBox(
+                      SizedBox(
                         height: 20,
                       ),
-                       BoldText(text: 'Property Sharing solutions'),
-                       SizedBox(
+                      BoldText(text: 'Property Sharing solutions'),
+                      SizedBox(
                         height: 75,
                       ),
                     ],
