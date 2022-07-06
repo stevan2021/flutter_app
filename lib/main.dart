@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
-        home: const HomeScreen(bottomIndex: 1),
+        home: const LoadingScreen(),
       ),
     );
   }
