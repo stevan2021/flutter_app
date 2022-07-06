@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:preview_project/constants/color.dart';
 import 'package:preview_project/functions/next_page.dart';
 import 'package:preview_project/screens/setup_profile/expenses.dart';
 import 'package:preview_project/widgets/card_widget.dart';
-import 'package:preview_project/widgets/customAppBar.dart';
+import 'package:preview_project/widgets/custom_appbar.dart';
 import 'package:preview_project/widgets/elevated_button.dart';
 import 'package:preview_project/widgets/liner_indicator.dart';
 import 'package:preview_project/widgets/text_field_widget.dart';
@@ -19,6 +20,7 @@ class _PurchasePowerState extends State<PurchasePower> {
   final double percentCompleted = 0.6;
 
   final TextEditingController _textEditingController = TextEditingController();
+  final TextEditingController _cashInHandController = TextEditingController();
 
   final List<int> _dropDownList = [0, 1, 2, 3, 4, 5, 6];
 
@@ -28,6 +30,7 @@ class _PurchasePowerState extends State<PurchasePower> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Column(
         children: [
           const CustomAppBar(
@@ -109,7 +112,7 @@ class _PurchasePowerState extends State<PurchasePower> {
                   height: 20,
                 ),
                 CardWidget(
-                  color: Colors.white,
+                  color: kWhiteColor,
                   elevation: 2,
                   radius: 10,
                   widget: CheckboxListTile(
@@ -133,6 +136,20 @@ class _PurchasePowerState extends State<PurchasePower> {
                     },
                   ),
                 ),
+                if (cashInHand)
+                  CardWidget(
+                    elevation: 2,
+                    radius: 10,
+                    color: kWhiteColor,
+                    widget: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextFieldWidget(
+                          textEditingController: _cashInHandController,
+                          hintText: 'Cash in hand',
+                          textInputType:
+                              const TextInputType.numberWithOptions()),
+                    ),
+                  ),
               ],
             ),
           ),

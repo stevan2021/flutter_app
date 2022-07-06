@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:preview_project/constants/color.dart';
+import 'package:preview_project/functions/next_page.dart';
+import 'package:preview_project/screens/login/login.dart';
 import 'package:preview_project/screens/onboarding/third_page.dart';
 import 'package:preview_project/widgets/bold_text.dart';
 import 'package:preview_project/widgets/button_image.dart';
 import 'package:preview_project/widgets/center_image.dart';
+import 'package:preview_project/widgets/text_styles.dart';
 
 class SecondPage extends StatelessWidget {
   const SecondPage({Key? key}) : super(key: key);
@@ -50,6 +54,12 @@ class SecondPage extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => const ThirdPage()));
               },
               child: const ButtonImage(),
+            ),
+            TextButton(
+              onPressed: () {
+                nextPage(context: context, widget: Login());
+              },
+              child: regularText(text: 'Skip', color: kBlackColor),
             ),
           ],
         ),

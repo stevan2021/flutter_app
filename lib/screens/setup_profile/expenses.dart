@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:preview_project/functions/next_page.dart';
 import 'package:preview_project/screens/setup_profile/success.dart';
 import 'package:preview_project/widgets/card_widget.dart';
-import 'package:preview_project/widgets/customAppBar.dart';
+import 'package:preview_project/widgets/custom_appbar.dart';
 import 'package:preview_project/widgets/elevated_button.dart';
 import 'package:preview_project/widgets/liner_indicator.dart';
 import 'package:preview_project/widgets/text_field_widget.dart';
@@ -25,6 +25,7 @@ class _ExpensesState extends State<Expenses> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Column(
         children: [
           const CustomAppBar(text: 'Expenses', backButton: true),

@@ -23,10 +23,11 @@ Text boldText(
   );
 }
 
-Text regularText({required String text, Color? color, double? size}) {
+Text regularText(
+    {required String text, Color? color, double? size, TextAlign? textAlign}) {
   return Text(
     text,
-    textAlign: TextAlign.left,
+    textAlign: textAlign ?? TextAlign.left,
     style: TextStyle(
         color: color ?? Colors.white,
         fontSize: size ?? 14,

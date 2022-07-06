@@ -1,10 +1,10 @@
+import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:preview_project/constants/color.dart';
+import 'package:preview_project/screens/home/home_screen.dart';
 import 'package:preview_project/widgets/card_widget.dart';
 import 'package:preview_project/widgets/elevated_button.dart';
 import 'package:preview_project/widgets/text_styles.dart';
-
-const kBlackColor = Colors.black;
-const kWhiteColor = Colors.white;
 
 class SuccessScreen extends StatelessWidget {
   const SuccessScreen({Key? key}) : super(key: key);
@@ -55,12 +55,30 @@ class SuccessScreen extends StatelessWidget {
               height: 40,
             ),
             elevatedButton(
-                context: context, text: 'Find a property', function: () {}),
+                context: context,
+                text: 'Find a property',
+                function: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const HomeScreen(
+                                bottomIndex: 1,
+                              )));
+                }),
             const SizedBox(
               height: 20,
             ),
             elevatedButton(
-                context: context, text: 'Go to Home', function: () {}),
+                context: context,
+                text: 'Go to Home',
+                function: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const HomeScreen(
+                                bottomIndex: 3,
+                              )));
+                }),
             const SizedBox(
               height: 20,
             ),
@@ -96,11 +114,11 @@ class SuccessScreen extends StatelessWidget {
                   function: () {},
                 ),
                 RoundedShareIcons(
-                  icon: Icons.facebook_rounded,
+                  icon: EvaIcons.emailOutline,
                   function: () {},
                 ),
                 RoundedShareIcons(
-                  icon: Icons.facebook_rounded,
+                  icon: EvaIcons.twitter,
                   function: () {},
                 ),
               ],

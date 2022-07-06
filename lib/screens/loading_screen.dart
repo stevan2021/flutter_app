@@ -42,7 +42,10 @@ class _LoadingScreenState extends State<LoadingScreen> {
                       SizedBox(
                         height: 20,
                       ),
-                      BoldText(text: 'Property Sharing solutions'),
+                      BoldText(
+                        text: 'Property Sharing solutions',
+                        color: Colors.white,
+                      ),
                       SizedBox(
                         height: 75,
                       ),

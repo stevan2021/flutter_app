@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:preview_project/constants/color.dart';
 import 'package:preview_project/functions/next_page.dart';
 import 'package:preview_project/screens/setup_profile/profile.dart';
 import 'package:preview_project/widgets/card_widget.dart';
@@ -48,8 +49,51 @@ class VerifyScreen extends StatelessWidget {
               child: elevatedButton(
                   context: context,
                   text: 'Verify',
-                  function: () =>
-                      nextPage(context: context, widget:  ProfileScreen()),
+                  function: () async {
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          content: SizedBox(
+                            height: MediaQuery.of(context).size.height / 2,
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Image.asset('asset/check.png'),
+                                const SizedBox(
+                                  height: 20,
+                                ),
+                                boldText(
+                                    text: 'Congratulations!',
+                                    size: 25,
+                                    color: kBlackColor),
+                                const SizedBox(
+                                  height: 20,
+                                ),
+                                regularText(
+                                    color: kBlackColor,
+                                    text:
+                                        'Your account is ready to use. You will be redirect to set up you profile in few seconds.'),
+                                const SizedBox(
+                                  height: 40,
+                                ),
+                                const CircularProgressIndicator(
+                                  color: kBlackColor,
+                                ),
+                              ],
+                            ),
+                          ),
+                        );
+                      },
+                    );
+                    await Future.delayed(const Duration(seconds: 3));
+                    Navigator.pop(context);
+                    nextPage(context: context, widget: ProfileScreen());
+                  },
                   rounded: 25),
             ),
             Center(

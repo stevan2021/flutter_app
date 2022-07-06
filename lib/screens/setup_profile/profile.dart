@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:preview_project/functions/next_page.dart';
 import 'package:preview_project/screens/setup_profile/resident_status.dart';
 import 'package:preview_project/widgets/card_widget.dart';
-import 'package:preview_project/widgets/customAppBar.dart';
+import 'package:preview_project/widgets/custom_appbar.dart';
 import 'package:preview_project/widgets/elevated_button.dart';
 import 'package:preview_project/widgets/liner_indicator.dart';
 import 'package:preview_project/widgets/text_styles.dart';
