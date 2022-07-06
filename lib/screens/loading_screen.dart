@@ -39,13 +39,13 @@ class _LoadingScreenState extends State<LoadingScreen> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: const [
                       CenterImage(image: 'asset/logo.png'),
-                      SizedBox(
-                        height: 20,
-                      ),
+                      // SizedBox(
+                      //   height: 20,
+                      // ),
                       BoldText(text: 'Property Sharing solutions'),
-                      SizedBox(
-                        height: 75,
-                      ),
+                      // SizedBox(
+                      //   height: 75,
+                      // ),
                     ],
                   ),
                 ),

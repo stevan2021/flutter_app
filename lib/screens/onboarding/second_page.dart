@@ -35,11 +35,15 @@ class SecondPage extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 30,
+              height: 40,
             ),
-            const BoldText(
-              text:
-                  'Boost your purchasing power by connecting friends and family to your account',
+            const Text(
+              'Boost your purchasing power\n by connecting friends and\n  family to your account',
+              style: TextStyle(
+                fontSize: 26,
+                fontWeight: FontWeight.bold,
+              ),
+              textAlign: TextAlign.center,
             ),
             const SizedBox(
               height: 20,

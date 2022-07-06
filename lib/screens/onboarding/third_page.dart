@@ -25,8 +25,16 @@ class ThirdPage extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            const BoldText(
-                text: 'BuyMates manage the property and pay your rental %'),
+            const Text(
+              'BuyMates manage the property and pay your rental %',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            // const BoldText(
+            //     text: 'BuyMates manage the\n property and pay your\n rental %'),
             const SizedBox(
               height: 20,
             ),

@@ -25,7 +25,14 @@ class FirstPage extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            const BoldText(text: 'Get your property that you want with mates'),
+            const Text(
+              'Get your property\n that you want with\n mates',
+              style: TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+              ),
+              textAlign: TextAlign.center,
+            ),
             const SizedBox(
               height: 20,
             ),
